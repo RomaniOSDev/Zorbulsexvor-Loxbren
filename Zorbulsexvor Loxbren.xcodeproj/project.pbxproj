@@ -3,33 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 60;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		746646F72F62B5450060B71D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 746646E22F62B5450060B71D /* Assets.xcassets */; };
+		746646F92F62B5450060B71D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746646E92F62B5450060B71D /* LaunchScreen.storyboard */; };
+		746646FA2F62B5450060B71D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746646EB2F62B5450060B71D /* Main.storyboard */; };
+		746646FB2F62B5450060B71D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646E02F62B5450060B71D /* AppDelegate.swift */; };
+		746646FC2F62B5450060B71D /* AppStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646E12F62B5450060B71D /* AppStorageManager.swift */; };
+		746646FD2F62B5450060B71D /* CollectionAndSettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646E32F62B5450060B71D /* CollectionAndSettingsViews.swift */; };
+		746646FE2F62B5450060B71D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646E42F62B5450060B71D /* ContentView.swift */; };
+		746646FF2F62B5450060B71D /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646E52F62B5450060B71D /* DesignSystem.swift */; };
+		746647002F62B5450060B71D /* GameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646E62F62B5450060B71D /* GameModels.swift */; };
+		746647012F62B5450060B71D /* MainShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646EC2F62B5450060B71D /* MainShellView.swift */; };
+		746647022F62B5450060B71D /* OnboardingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646ED2F62B5450060B71D /* OnboardingViews.swift */; };
+		746647032F62B5450060B71D /* PatternRecallGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646EE2F62B5450060B71D /* PatternRecallGameView.swift */; };
+		746647042F62B5450060B71D /* PixelMatchGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646EF2F62B5450060B71D /* PixelMatchGameView.swift */; };
+		746647052F62B5450060B71D /* PlayRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646F02F62B5450060B71D /* PlayRootView.swift */; };
+		746647062F62B5450060B71D /* ResultSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646F12F62B5450060B71D /* ResultSummaryView.swift */; };
+		746647072F62B5450060B71D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646F22F62B5450060B71D /* SceneDelegate.swift */; };
+		746647082F62B5450060B71D /* SeededRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646F32F62B5450060B71D /* SeededRandom.swift */; };
+		746647092F62B5450060B71D /* ShapeSortGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646F42F62B5450060B71D /* ShapeSortGameView.swift */; };
+		7466470A2F62B5450060B71D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746646F52F62B5450060B71D /* ViewController.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		746646892F629D4A0060B71D /* Zorbulsexvor Loxbren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zorbulsexvor Loxbren.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		746646E02F62B5450060B71D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		746646E12F62B5450060B71D /* AppStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageManager.swift; sourceTree = "<group>"; };
+		746646E22F62B5450060B71D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		746646E32F62B5450060B71D /* CollectionAndSettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndSettingsViews.swift; sourceTree = "<group>"; };
+		746646E42F62B5450060B71D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		746646E52F62B5450060B71D /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		746646E62F62B5450060B71D /* GameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModels.swift; sourceTree = "<group>"; };
+		746646E72F62B5450060B71D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		746646E82F62B5450060B71D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		746646EA2F62B5450060B71D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		746646EC2F62B5450060B71D /* MainShellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShellView.swift; sourceTree = "<group>"; };
+		746646ED2F62B5450060B71D /* OnboardingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViews.swift; sourceTree = "<group>"; };
+		746646EE2F62B5450060B71D /* PatternRecallGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternRecallGameView.swift; sourceTree = "<group>"; };
+		746646EF2F62B5450060B71D /* PixelMatchGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelMatchGameView.swift; sourceTree = "<group>"; };
+		746646F02F62B5450060B71D /* PlayRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRootView.swift; sourceTree = "<group>"; };
+		746646F12F62B5450060B71D /* ResultSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSummaryView.swift; sourceTree = "<group>"; };
+		746646F22F62B5450060B71D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		746646F32F62B5450060B71D /* SeededRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeededRandom.swift; sourceTree = "<group>"; };
+		746646F42F62B5450060B71D /* ShapeSortGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSortGameView.swift; sourceTree = "<group>"; };
+		746646F52F62B5450060B71D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E5900076E6CBF2A51BEE7D7 /* Pods_Zorbulsexvor_Loxbren.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zorbulsexvor_Loxbren.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7B0E76F0142B27431D0EF43 /* Pods-Zorbulsexvor Loxbren.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zorbulsexvor Loxbren.debug.xcconfig"; path = "Target Support Files/Pods-Zorbulsexvor Loxbren/Pods-Zorbulsexvor Loxbren.debug.xcconfig"; sourceTree = "<group>"; };
+		E6BCE18B955339EEA09C99CA /* Pods-Zorbulsexvor Loxbren.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zorbulsexvor Loxbren.release.xcconfig"; path = "Target Support Files/Pods-Zorbulsexvor Loxbren/Pods-Zorbulsexvor Loxbren.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		7466469B2F629D4B0060B71D /* Exceptions for "Zorbulsexvor Loxbren" folder in "Zorbulsexvor Loxbren" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 746646882F629D4A0060B71D /* Zorbulsexvor Loxbren */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		7466468B2F629D4A0060B71D /* Zorbulsexvor Loxbren */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				7466469B2F629D4B0060B71D /* Exceptions for "Zorbulsexvor Loxbren" folder in "Zorbulsexvor Loxbren" target */,
-			);
-			path = "Zorbulsexvor Loxbren";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		746646862F629D4A0060B71D /* Frameworks */ = {
@@ -42,11 +66,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E1B6DC3B75E507CD2CA0B47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E5900076E6CBF2A51BEE7D7 /* Pods_Zorbulsexvor_Loxbren.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		478A08CE83D3506EFCCD0D93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7B0E76F0142B27431D0EF43 /* Pods-Zorbulsexvor Loxbren.debug.xcconfig */,
+				E6BCE18B955339EEA09C99CA /* Pods-Zorbulsexvor Loxbren.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		746646802F629D4A0060B71D = {
 			isa = PBXGroup;
 			children = (
-				7466468B2F629D4A0060B71D /* Zorbulsexvor Loxbren */,
+				746646F62F62B5450060B71D /* Zorbulsexvor Loxbren */,
 				7466468A2F629D4A0060B71D /* Products */,
+				478A08CE83D3506EFCCD0D93 /* Pods */,
+				1E1B6DC3B75E507CD2CA0B47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +101,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		746646F62F62B5450060B71D /* Zorbulsexvor Loxbren */ = {
+			isa = PBXGroup;
+			children = (
+				746646E02F62B5450060B71D /* AppDelegate.swift */,
+				746646E12F62B5450060B71D /* AppStorageManager.swift */,
+				746646E22F62B5450060B71D /* Assets.xcassets */,
+				746646E32F62B5450060B71D /* CollectionAndSettingsViews.swift */,
+				746646E42F62B5450060B71D /* ContentView.swift */,
+				746646E52F62B5450060B71D /* DesignSystem.swift */,
+				746646E62F62B5450060B71D /* GameModels.swift */,
+				746646E72F62B5450060B71D /* Info.plist */,
+				746646E92F62B5450060B71D /* LaunchScreen.storyboard */,
+				746646EB2F62B5450060B71D /* Main.storyboard */,
+				746646EC2F62B5450060B71D /* MainShellView.swift */,
+				746646ED2F62B5450060B71D /* OnboardingViews.swift */,
+				746646EE2F62B5450060B71D /* PatternRecallGameView.swift */,
+				746646EF2F62B5450060B71D /* PixelMatchGameView.swift */,
+				746646F02F62B5450060B71D /* PlayRootView.swift */,
+				746646F12F62B5450060B71D /* ResultSummaryView.swift */,
+				746646F22F62B5450060B71D /* SceneDelegate.swift */,
+				746646F32F62B5450060B71D /* SeededRandom.swift */,
+				746646F42F62B5450060B71D /* ShapeSortGameView.swift */,
+				746646F52F62B5450060B71D /* ViewController.swift */,
+			);
+			path = "Zorbulsexvor Loxbren";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7466469C2F629D4B0060B71D /* Build configuration list for PBXNativeTarget "Zorbulsexvor Loxbren" */;
 			buildPhases = (
+				9C9BAC89ABAF9437C2CD8099 /* [CP] Check Pods Manifest.lock */,
 				746646852F629D4A0060B71D /* Sources */,
 				746646862F629D4A0060B71D /* Frameworks */,
 				746646872F629D4A0060B71D /* Resources */,
@@ -73,12 +144,7 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				7466468B2F629D4A0060B71D /* Zorbulsexvor Loxbren */,
-			);
 			name = "Zorbulsexvor Loxbren";
-			packageProductDependencies = (
-			);
 			productName = "Zorbulsexvor Loxbren";
 			productReference = 746646892F629D4A0060B71D /* Zorbulsexvor Loxbren.app */;
 			productType = "com.apple.product-type.application";
@@ -99,6 +165,7 @@
 				};
 			};
 			buildConfigurationList = 746646842F629D4A0060B71D /* Build configuration list for PBXProject "Zorbulsexvor Loxbren" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -106,8 +173,6 @@
 				Base,
 			);
 			mainGroup = 746646802F629D4A0060B71D;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 7466468A2F629D4A0060B71D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -122,24 +187,88 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746646F72F62B5450060B71D /* Assets.xcassets in Resources */,
+				746646F92F62B5450060B71D /* LaunchScreen.storyboard in Resources */,
+				746646FA2F62B5450060B71D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C9BAC89ABAF9437C2CD8099 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zorbulsexvor Loxbren-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		746646852F629D4A0060B71D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746646FB2F62B5450060B71D /* AppDelegate.swift in Sources */,
+				746646FC2F62B5450060B71D /* AppStorageManager.swift in Sources */,
+				746646FD2F62B5450060B71D /* CollectionAndSettingsViews.swift in Sources */,
+				746646FE2F62B5450060B71D /* ContentView.swift in Sources */,
+				746646FF2F62B5450060B71D /* DesignSystem.swift in Sources */,
+				746647002F62B5450060B71D /* GameModels.swift in Sources */,
+				746647012F62B5450060B71D /* MainShellView.swift in Sources */,
+				746647022F62B5450060B71D /* OnboardingViews.swift in Sources */,
+				746647032F62B5450060B71D /* PatternRecallGameView.swift in Sources */,
+				746647042F62B5450060B71D /* PixelMatchGameView.swift in Sources */,
+				746647052F62B5450060B71D /* PlayRootView.swift in Sources */,
+				746647062F62B5450060B71D /* ResultSummaryView.swift in Sources */,
+				746647072F62B5450060B71D /* SceneDelegate.swift in Sources */,
+				746647082F62B5450060B71D /* SeededRandom.swift in Sources */,
+				746647092F62B5450060B71D /* ShapeSortGameView.swift in Sources */,
+				7466470A2F62B5450060B71D /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		746646E92F62B5450060B71D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				746646E82F62B5450060B71D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		746646EB2F62B5450060B71D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				746646EA2F62B5450060B71D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		7466469D2F629D4B0060B71D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7B0E76F0142B27431D0EF43 /* Pods-Zorbulsexvor Loxbren.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -147,30 +276,38 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Zorbulsexvor Loxbren/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Zorbulsexvor Loxbren";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany.Zorbulsexvor-Loxbren";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hun.mn3m2n6m;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7466469E2F629D4B0060B71D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6BCE18B955339EEA09C99CA /* Pods-Zorbulsexvor Loxbren.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -178,25 +315,32 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Zorbulsexvor Loxbren/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Zorbulsexvor Loxbren";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany.Zorbulsexvor-Loxbren";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hun.mn3m2n6m;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

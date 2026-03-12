@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Zorbulsexvor Loxbren
 //
-//  Created by Роман Главацкий on 12.03.2026.
+//  Created by Nguyen Minhthinh on 12.03.2026.
 //
 
 import UIKit
