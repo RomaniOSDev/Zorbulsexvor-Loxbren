@@ -40,47 +40,55 @@ final class ShapeSortViewModel: ObservableObject {
     private let levelIndex: Int
     private let difficulty: GameDifficulty
     private let adaptiveModifier: Int
+    private let modifier: LevelModifier?
 
     init(level: GameLevel, canvasSize: CGSize, adaptiveModifier: Int, seed: UInt64) {
         _ = seed
         levelIndex = level.index
         difficulty = level.difficulty
         self.adaptiveModifier = adaptiveModifier
+        self.modifier = level.modifier
+        let computedTime: TimeInterval
+        let computedMistakes: Int
         switch level.difficulty {
         case .easy:
             switch adaptiveModifier {
-            case -1: maxTime = 70
-            case 1: maxTime = 52
-            default: maxTime = 60
+            case -1: computedTime = 70
+            case 1: computedTime = 52
+            default: computedTime = 60
             }
             switch adaptiveModifier {
-            case -1: allowedMistakes = 9
-            case 1: allowedMistakes = 7
-            default: allowedMistakes = 8
+            case -1: computedMistakes = 9
+            case 1: computedMistakes = 7
+            default: computedMistakes = 8
             }
         case .normal:
             switch adaptiveModifier {
-            case -1: maxTime = 60
-            case 1: maxTime = 42
-            default: maxTime = 50
+            case -1: computedTime = 60
+            case 1: computedTime = 42
+            default: computedTime = 50
             }
             switch adaptiveModifier {
-            case -1: allowedMistakes = 7
-            case 1: allowedMistakes = 5
-            default: allowedMistakes = 6
+            case -1: computedMistakes = 7
+            case 1: computedMistakes = 5
+            default: computedMistakes = 6
             }
         case .hard:
             switch adaptiveModifier {
-            case -1: maxTime = 50
-            case 1: maxTime = 32
-            default: maxTime = 40
+            case -1: computedTime = 50
+            case 1: computedTime = 32
+            default: computedTime = 40
             }
             switch adaptiveModifier {
-            case -1: allowedMistakes = 5
-            case 1: allowedMistakes = 3
-            default: allowedMistakes = 4
+            case -1: computedMistakes = 5
+            case 1: computedMistakes = 3
+            default: computedMistakes = 4
             }
         }
+        let timeAfterModifier = modifier == .chronoLock ? max(20, computedTime - 6) : computedTime
+        let mistakesAfterModifier = modifier == .precisionSeal ? max(1, computedMistakes - 1) : computedMistakes
+        maxTime = timeAfterModifier
+        allowedMistakes = mistakesAfterModifier
         generatePath(for: level, in: canvasSize)
         startTimer()
     }

@@ -25,6 +25,7 @@ final class PixelMatchViewModel: ObservableObject {
     private let maxTime: TimeInterval
     private let colorsCount: Int
     private let gridSize: Int
+    private let modifier: LevelModifier?
     private var random: SeededRandom
 
     init(level: GameLevel, adaptiveModifier: Int, seed: UInt64) {
@@ -37,20 +38,24 @@ final class PixelMatchViewModel: ObservableObject {
         }
 
         random = SeededRandom(seed: seed)
+        modifier = level.modifier
+        let baseTime: TimeInterval
         switch level.difficulty {
         case .easy:
             gridSize = 3
-            colorsCount = 2
-            maxTime = adaptiveTime(base: 60, modifier: adaptiveModifier)
+            colorsCount = modifier == .echoShift ? 3 : 2
+            baseTime = 60
         case .normal:
             gridSize = 4
-            colorsCount = 3
-            maxTime = adaptiveTime(base: 50, modifier: adaptiveModifier)
+            colorsCount = modifier == .echoShift ? 4 : 3
+            baseTime = 50
         case .hard:
             gridSize = 5
-            colorsCount = 4
-            maxTime = adaptiveTime(base: 40, modifier: adaptiveModifier)
+            colorsCount = modifier == .echoShift ? 5 : 4
+            baseTime = 40
         }
+        let adaptiveTimeValue = adaptiveTime(base: baseTime, modifier: adaptiveModifier)
+        maxTime = modifier == .chronoLock ? max(18, adaptiveTimeValue - 6) : adaptiveTimeValue
         generateGrid()
         startTimer()
     }
@@ -105,7 +110,8 @@ final class PixelMatchViewModel: ObservableObject {
     func starsEarned() -> Int {
         guard isCompleted else { return 0 }
         let ratio = elapsed / maxTime
-        if ratio <= 0.5, moves <= gridSize * gridSize * 2 {
+        let strictMoveCap = modifier == .precisionSeal ? Int(Double(gridSize * gridSize * 2) * 0.8) : gridSize * gridSize * 2
+        if ratio <= 0.5, moves <= strictMoveCap {
             return 3
         } else if ratio <= 0.8 {
             return 2

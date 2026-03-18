@@ -50,20 +50,73 @@ enum GameActivityKind: String, CaseIterable, Identifiable, Hashable {
     }
 }
 
+enum LevelModifier: String, Hashable, CaseIterable {
+    case chronoLock
+    case echoShift
+    case precisionSeal
+
+    var title: String {
+        switch self {
+        case .chronoLock: return "Chrono Lock"
+        case .echoShift: return "Echo Shift"
+        case .precisionSeal: return "Precision Seal"
+        }
+    }
+
+    var description: String {
+        switch self {
+        case .chronoLock:
+            return "Short timer, higher star reward."
+        case .echoShift:
+            return "Pattern changes are less predictable."
+        case .precisionSeal:
+            return "Mistakes cost more, but perfect runs score big."
+        }
+    }
+}
+
 struct GameLevel: Identifiable, Hashable {
     let id: String
     let index: Int
     let difficulty: GameDifficulty
     let activity: GameActivityKind
     let isDailyChallenge: Bool
+    let chapterID: String?
+    let nodeID: String?
+    let modifier: LevelModifier?
 
-    init(id: String, index: Int, difficulty: GameDifficulty, activity: GameActivityKind, isDailyChallenge: Bool = false) {
+    init(id: String,
+         index: Int,
+         difficulty: GameDifficulty,
+         activity: GameActivityKind,
+         isDailyChallenge: Bool = false,
+         chapterID: String? = nil,
+         nodeID: String? = nil,
+         modifier: LevelModifier? = nil) {
         self.id = id
         self.index = index
         self.difficulty = difficulty
         self.activity = activity
         self.isDailyChallenge = isDailyChallenge
+        self.chapterID = chapterID
+        self.nodeID = nodeID
+        self.modifier = modifier
     }
+}
+
+struct AtlasNode: Identifiable, Hashable {
+    let id: String
+    let title: String
+    let subtitle: String
+    let level: GameLevel
+}
+
+struct AtlasChapter: Identifiable, Hashable {
+    let id: String
+    let title: String
+    let lore: String
+    let accentSymbol: String
+    let nodes: [AtlasNode]
 }
 
 enum LevelGoalKind: Hashable {

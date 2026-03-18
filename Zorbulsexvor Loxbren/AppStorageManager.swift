@@ -22,6 +22,8 @@ final class AppStorageManager: ObservableObject {
         static let lastPlayedDay = "lastPlayedDay"
         static let adaptivePerformanceByTrack = "adaptivePerformanceByTrack"
         static let completedDailyChallengeDays = "completedDailyChallengeDays"
+        static let completedAtlasNodeIDs = "completedAtlasNodeIDs"
+        static let bestDailyTimeByDay = "bestDailyTimeByDay"
     }
 
     static let resetNotification = Notification.Name("AppStorageManagerResetAll")
@@ -34,6 +36,8 @@ final class AppStorageManager: ObservableObject {
     @Published private(set) var bestStreakDays: Int
     @Published private(set) var adaptivePerformanceByTrack: [String: Int]
     @Published private(set) var completedDailyChallengeDays: Set<String>
+    @Published private(set) var completedAtlasNodeIDs: Set<String>
+    @Published private(set) var bestDailyTimeByDay: [String: Double]
     @Published var hasSeenOnboarding: Bool {
         didSet {
             UserDefaults.standard.set(hasSeenOnboarding, forKey: Keys.hasSeenOnboarding)
@@ -55,6 +59,8 @@ final class AppStorageManager: ObservableObject {
         adaptivePerformanceByTrack = defaults.dictionary(forKey: Keys.adaptivePerformanceByTrack) as? [String: Int] ?? [:]
         let completed = defaults.array(forKey: Keys.completedDailyChallengeDays) as? [String] ?? []
         completedDailyChallengeDays = Set(completed)
+        completedAtlasNodeIDs = Set(defaults.array(forKey: Keys.completedAtlasNodeIDs) as? [String] ?? [])
+        bestDailyTimeByDay = defaults.dictionary(forKey: Keys.bestDailyTimeByDay) as? [String: Double] ?? [:]
     }
 
     // MARK: - Level and stars
@@ -186,12 +192,14 @@ final class AppStorageManager: ObservableObject {
         let difficulties = GameDifficulty.allCases
         let difficulty = difficulties[Int((seed / 7) % UInt64(difficulties.count))]
         let index = Int((seed / 11) % 9)
+        let modifier = LevelModifier.allCases[Int((seed / 17) % UInt64(LevelModifier.allCases.count))]
         let level = GameLevel(
             id: "daily_\(day)_\(activity.rawValue)_\(difficulty.rawValue)_\(index)",
             index: index,
             difficulty: difficulty,
             activity: activity,
-            isDailyChallenge: true
+            isDailyChallenge: true,
+            modifier: modifier
         )
         return DailyChallengeDescriptor(seed: seed, level: level, displayDate: day)
     }
@@ -202,6 +210,33 @@ final class AppStorageManager: ObservableObject {
         if !completedDailyChallengeDays.contains(key) {
             completedDailyChallengeDays.insert(key)
             UserDefaults.standard.set(Array(completedDailyChallengeDays), forKey: Keys.completedDailyChallengeDays)
+        }
+    }
+
+    func updateBestDailyTimeIfNeeded(_ level: GameLevel, time: TimeInterval) {
+        guard level.isDailyChallenge, time > 0 else { return }
+        let day = dayKey(for: Date())
+        let current = bestDailyTimeByDay[day] ?? .greatestFiniteMagnitude
+        if time < current {
+            bestDailyTimeByDay[day] = time
+            UserDefaults.standard.set(bestDailyTimeByDay, forKey: Keys.bestDailyTimeByDay)
+        }
+    }
+
+    func bestTimeForTodayDailyChallenge() -> TimeInterval? {
+        let day = dayKey(for: Date())
+        guard let value = bestDailyTimeByDay[day] else { return nil }
+        return value
+    }
+
+    func isAtlasNodeCompleted(_ nodeID: String) -> Bool {
+        completedAtlasNodeIDs.contains(nodeID)
+    }
+
+    func completeAtlasNode(_ nodeID: String) {
+        if !completedAtlasNodeIDs.contains(nodeID) {
+            completedAtlasNodeIDs.insert(nodeID)
+            UserDefaults.standard.set(Array(completedAtlasNodeIDs), forKey: Keys.completedAtlasNodeIDs)
         }
     }
 
@@ -340,6 +375,8 @@ final class AppStorageManager: ObservableObject {
         defaults.removeObject(forKey: Keys.lastPlayedDay)
         defaults.removeObject(forKey: Keys.adaptivePerformanceByTrack)
         defaults.removeObject(forKey: Keys.completedDailyChallengeDays)
+        defaults.removeObject(forKey: Keys.completedAtlasNodeIDs)
+        defaults.removeObject(forKey: Keys.bestDailyTimeByDay)
 
         starsPerLevel = [:]
         unlockedLevelIndex = [:]
@@ -350,6 +387,8 @@ final class AppStorageManager: ObservableObject {
         lastPlayedDay = ""
         adaptivePerformanceByTrack = [:]
         completedDailyChallengeDays = []
+        completedAtlasNodeIDs = []
+        bestDailyTimeByDay = [:]
         hasSeenOnboarding = false
 
         NotificationCenter.default.post(name: AppStorageManager.resetNotification, object: nil)

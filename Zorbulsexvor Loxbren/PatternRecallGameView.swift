@@ -28,10 +28,12 @@ final class PatternRecallViewModel: ObservableObject {
     private let maxTime: TimeInterval
     private var timer: Timer?
     private let adaptiveModifier: Int
+    private let modifier: LevelModifier?
     private var random: SeededRandom
 
     init(level: GameLevel, adaptiveModifier: Int, seed: UInt64) {
         self.adaptiveModifier = adaptiveModifier
+        self.modifier = level.modifier
         self.random = SeededRandom(seed: seed)
         switch level.difficulty {
         case .easy:
@@ -76,7 +78,8 @@ final class PatternRecallViewModel: ObservableObject {
         case .hard: baseLength = 8
         }
         let adaptiveDelta = adaptiveModifier == -1 ? -1 : (adaptiveModifier == 1 ? 1 : 0)
-        let finalLength = max(3, baseLength + adaptiveDelta)
+        let modifierDelta = modifier == .echoShift ? 1 : 0
+        let finalLength = max(3, baseLength + adaptiveDelta + modifierDelta)
         var seq: [Int] = []
         for _ in 0..<finalLength {
             seq.append(random.nextInt(upperBound: gridSize * gridSize))
@@ -102,7 +105,7 @@ final class PatternRecallViewModel: ObservableObject {
         phase = .showing
         highlightedIndex = nil
         userInput = []
-        let stepDuration: TimeInterval = 0.6
+        let stepDuration: TimeInterval = modifier == .chronoLock ? 0.45 : 0.6
 
         for (i, index) in sequence.enumerated() {
             let onTime = TimeInterval(i) * stepDuration
@@ -132,6 +135,9 @@ final class PatternRecallViewModel: ObservableObject {
         guard currentIndex >= 0 else { return }
         if userInput[currentIndex] != sequence[currentIndex] {
             mistakes += 1
+            if modifier == .precisionSeal {
+                mistakes += 1
+            }
             phase = .finished(success: false)
             timer?.invalidate()
             return

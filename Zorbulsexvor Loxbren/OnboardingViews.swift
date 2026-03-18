@@ -21,19 +21,19 @@ struct OnboardingContainerView: View {
 
     private let pages: [OnboardingPageData] = [
         .init(
-            title: "Pixel-perfect puzzles",
-            subtitle: "Tap, drag, and trace simple grids that grow into surprisingly deep challenges.",
-            accentText: "Quick to start, hard to put down."
+            title: "Signal Atlas is unstable",
+            subtitle: "Neon fragments drift through broken glyph zones. Each node restores one missing shard.",
+            accentText: "Recover the map one chapter at a time."
         ),
         .init(
-            title: "Stars for skill",
-            subtitle: "Earn up to three stars based on speed, precision, and efficient moves.",
-            accentText: "Replay levels to perfect your run."
+            title: "Modifiers rewrite the rules",
+            subtitle: "Chrono Lock, Echo Shift, and Precision Seal reshape each run with unique pressure.",
+            accentText: "Learn each modifier to stay in control."
         ),
         .init(
-            title: "Three ways to play",
-            subtitle: "Match patterns, place shapes, and follow glowing sequences across easy, normal, and hard tracks.",
-            accentText: "Find your favorite puzzle flow."
+            title: "Daily Echo sync",
+            subtitle: "A shared daily signal appears every day with a fixed seed and your own ghost time to beat.",
+            accentText: "Return daily and extend your streak."
         )
     ]
 

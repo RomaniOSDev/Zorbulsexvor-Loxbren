@@ -20,11 +20,11 @@ struct ResultSummaryView: View {
         ScrollView {
             VStack(spacing: 24) {
                 VStack(spacing: 8) {
-                    Text(summary.didWin ? "Level complete" : "Try again")
+                    Text(summary.didWin ? "Signal stabilized" : "Signal collapsed")
                         .font(.system(size: 24, weight: .bold, design: .rounded))
                         .foregroundColor(.appTextPrimary)
 
-                    Text(summary.level.activity.title)
+                    Text(summary.level.activity.title + modifierSuffix)
                         .font(.system(size: 16, weight: .medium))
                         .foregroundColor(.appTextSecondary)
                 }
@@ -253,6 +253,13 @@ struct ResultSummaryView: View {
             return "Daily challenge complete"
         }
         return nextLevelFromCurrent() == nil ? "All levels complete" : "Next level"
+    }
+
+    private var modifierSuffix: String {
+        if let modifier = summary.level.modifier {
+            return " • \(modifier.title)"
+        }
+        return ""
     }
 
     private func animateStars() {
