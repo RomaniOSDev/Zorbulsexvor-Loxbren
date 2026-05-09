@@ -7,51 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		746C15982F6AC20200F44B30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15802F6AC20200F44B30 /* AppDelegate.swift */; };
-		746C15992F6AC20200F44B30 /* AppStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15812F6AC20200F44B30 /* AppStorageManager.swift */; };
-		746C159A2F6AC20200F44B30 /* CollectionAndSettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15832F6AC20200F44B30 /* CollectionAndSettingsViews.swift */; };
-		746C159B2F6AC20200F44B30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15842F6AC20200F44B30 /* ContentView.swift */; };
-		746C159C2F6AC20200F44B30 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15852F6AC20200F44B30 /* DesignSystem.swift */; };
-		746C159D2F6AC20200F44B30 /* GameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15862F6AC20200F44B30 /* GameModels.swift */; };
-		746C159E2F6AC20200F44B30 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15872F6AC20200F44B30 /* HomeViewModel.swift */; };
-		746C159F2F6AC20200F44B30 /* MainShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C158D2F6AC20200F44B30 /* MainShellView.swift */; };
-		746C15A02F6AC20200F44B30 /* OnboardingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C158E2F6AC20200F44B30 /* OnboardingViews.swift */; };
-		746C15A12F6AC20200F44B30 /* PatternRecallGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C158F2F6AC20200F44B30 /* PatternRecallGameView.swift */; };
-		746C15A22F6AC20200F44B30 /* PixelMatchGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15902F6AC20200F44B30 /* PixelMatchGameView.swift */; };
-		746C15A32F6AC20200F44B30 /* PlayRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15912F6AC20200F44B30 /* PlayRootView.swift */; };
-		746C15A42F6AC20200F44B30 /* ResultSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15922F6AC20200F44B30 /* ResultSummaryView.swift */; };
-		746C15A52F6AC20200F44B30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15932F6AC20200F44B30 /* SceneDelegate.swift */; };
-		746C15A62F6AC20200F44B30 /* SeededRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15942F6AC20200F44B30 /* SeededRandom.swift */; };
-		746C15A72F6AC20200F44B30 /* ShapeSortGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15952F6AC20200F44B30 /* ShapeSortGameView.swift */; };
-		746C15A82F6AC20200F44B30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C15962F6AC20200F44B30 /* ViewController.swift */; };
-		746C15A92F6AC20200F44B30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 746C15822F6AC20200F44B30 /* Assets.xcassets */; };
-		746C15AB2F6AC20200F44B30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746C158A2F6AC20200F44B30 /* LaunchScreen.storyboard */; };
-		746C15AC2F6AC20200F44B30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746C158C2F6AC20200F44B30 /* Main.storyboard */; };
+		306978CF2FAF08CD00EF45FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306978B82FAF08CD00EF45FD /* Assets.xcassets */; };
+		306978D12FAF08CD00EF45FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306978C02FAF08CD00EF45FD /* LaunchScreen.storyboard */; };
+		306978D22FAF08CD00EF45FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306978C22FAF08CD00EF45FD /* Main.storyboard */; };
+		306978D32FAF08CD00EF45FD /* AppGateRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978A82FAF08CD00EF45FD /* AppGateRootView.swift */; };
+		306978D42FAF08CD00EF45FD /* DeviceQueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978A92FAF08CD00EF45FD /* DeviceQueryParameters.swift */; };
+		306978D52FAF08CD00EF45FD /* InstallationIdentifierStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978AA2FAF08CD00EF45FD /* InstallationIdentifierStore.swift */; };
+		306978D62FAF08CD00EF45FD /* LoadingConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978AB2FAF08CD00EF45FD /* LoadingConfig.swift */; };
+		306978D72FAF08CD00EF45FD /* LoadingFlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978AC2FAF08CD00EF45FD /* LoadingFlowViewModel.swift */; };
+		306978D82FAF08CD00EF45FD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978AD2FAF08CD00EF45FD /* LoadingView.swift */; };
+		306978D92FAF08CD00EF45FD /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978AE2FAF08CD00EF45FD /* NetworkReachability.swift */; };
+		306978DA2FAF08CD00EF45FD /* OneSignalBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978AF2FAF08CD00EF45FD /* OneSignalBootstrap.swift */; };
+		306978DB2FAF08CD00EF45FD /* RemoteGateDecisionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978B02FAF08CD00EF45FD /* RemoteGateDecisionStore.swift */; };
+		306978DC2FAF08CD00EF45FD /* RemoteGateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978B12FAF08CD00EF45FD /* RemoteGateService.swift */; };
+		306978DD2FAF08CD00EF45FD /* URLAppendingUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978B22FAF08CD00EF45FD /* URLAppendingUUID.swift */; };
+		306978DE2FAF08CD00EF45FD /* WebviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978B32FAF08CD00EF45FD /* WebviewVC.swift */; };
+		306978DF2FAF08CD00EF45FD /* WebviewVCRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978B42FAF08CD00EF45FD /* WebviewVCRepresentable.swift */; };
+		306978E02FAF08CD00EF45FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978B62FAF08CD00EF45FD /* AppDelegate.swift */; };
+		306978E12FAF08CD00EF45FD /* AppStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978B72FAF08CD00EF45FD /* AppStorageManager.swift */; };
+		306978E22FAF08CD00EF45FD /* CollectionAndSettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978B92FAF08CD00EF45FD /* CollectionAndSettingsViews.swift */; };
+		306978E32FAF08CD00EF45FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978BA2FAF08CD00EF45FD /* ContentView.swift */; };
+		306978E42FAF08CD00EF45FD /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978BB2FAF08CD00EF45FD /* DesignSystem.swift */; };
+		306978E52FAF08CD00EF45FD /* GameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978BC2FAF08CD00EF45FD /* GameModels.swift */; };
+		306978E62FAF08CD00EF45FD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978BD2FAF08CD00EF45FD /* HomeViewModel.swift */; };
+		306978E72FAF08CD00EF45FD /* MainShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978C32FAF08CD00EF45FD /* MainShellView.swift */; };
+		306978E82FAF08CD00EF45FD /* OnboardingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978C42FAF08CD00EF45FD /* OnboardingViews.swift */; };
+		306978E92FAF08CD00EF45FD /* PatternRecallGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978C52FAF08CD00EF45FD /* PatternRecallGameView.swift */; };
+		306978EA2FAF08CD00EF45FD /* PixelMatchGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978C62FAF08CD00EF45FD /* PixelMatchGameView.swift */; };
+		306978EB2FAF08CD00EF45FD /* PlayRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978C72FAF08CD00EF45FD /* PlayRootView.swift */; };
+		306978EC2FAF08CD00EF45FD /* ResultSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978C82FAF08CD00EF45FD /* ResultSummaryView.swift */; };
+		306978ED2FAF08CD00EF45FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978C92FAF08CD00EF45FD /* SceneDelegate.swift */; };
+		306978EE2FAF08CD00EF45FD /* SeededRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978CA2FAF08CD00EF45FD /* SeededRandom.swift */; };
+		306978EF2FAF08CD00EF45FD /* ShapeSortGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978CB2FAF08CD00EF45FD /* ShapeSortGameView.swift */; };
+		306978F02FAF08CD00EF45FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306978CC2FAF08CD00EF45FD /* ViewController.swift */; };
+		746A19462F82E4FA0076A047 /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 746A19452F82E4FA0076A047 /* OneSignalFramework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		306978A82FAF08CD00EF45FD /* AppGateRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGateRootView.swift; sourceTree = "<group>"; };
+		306978A92FAF08CD00EF45FD /* DeviceQueryParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceQueryParameters.swift; sourceTree = "<group>"; };
+		306978AA2FAF08CD00EF45FD /* InstallationIdentifierStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationIdentifierStore.swift; sourceTree = "<group>"; };
+		306978AB2FAF08CD00EF45FD /* LoadingConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingConfig.swift; sourceTree = "<group>"; };
+		306978AC2FAF08CD00EF45FD /* LoadingFlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFlowViewModel.swift; sourceTree = "<group>"; };
+		306978AD2FAF08CD00EF45FD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		306978AE2FAF08CD00EF45FD /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		306978AF2FAF08CD00EF45FD /* OneSignalBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignalBootstrap.swift; sourceTree = "<group>"; };
+		306978B02FAF08CD00EF45FD /* RemoteGateDecisionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGateDecisionStore.swift; sourceTree = "<group>"; };
+		306978B12FAF08CD00EF45FD /* RemoteGateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGateService.swift; sourceTree = "<group>"; };
+		306978B22FAF08CD00EF45FD /* URLAppendingUUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLAppendingUUID.swift; sourceTree = "<group>"; };
+		306978B32FAF08CD00EF45FD /* WebviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewVC.swift; sourceTree = "<group>"; };
+		306978B42FAF08CD00EF45FD /* WebviewVCRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewVCRepresentable.swift; sourceTree = "<group>"; };
+		306978B62FAF08CD00EF45FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		306978B72FAF08CD00EF45FD /* AppStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageManager.swift; sourceTree = "<group>"; };
+		306978B82FAF08CD00EF45FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		306978B92FAF08CD00EF45FD /* CollectionAndSettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndSettingsViews.swift; sourceTree = "<group>"; };
+		306978BA2FAF08CD00EF45FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		306978BB2FAF08CD00EF45FD /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		306978BC2FAF08CD00EF45FD /* GameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModels.swift; sourceTree = "<group>"; };
+		306978BD2FAF08CD00EF45FD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		306978BE2FAF08CD00EF45FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		306978BF2FAF08CD00EF45FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		306978C12FAF08CD00EF45FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		306978C32FAF08CD00EF45FD /* MainShellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShellView.swift; sourceTree = "<group>"; };
+		306978C42FAF08CD00EF45FD /* OnboardingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViews.swift; sourceTree = "<group>"; };
+		306978C52FAF08CD00EF45FD /* PatternRecallGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternRecallGameView.swift; sourceTree = "<group>"; };
+		306978C62FAF08CD00EF45FD /* PixelMatchGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelMatchGameView.swift; sourceTree = "<group>"; };
+		306978C72FAF08CD00EF45FD /* PlayRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRootView.swift; sourceTree = "<group>"; };
+		306978C82FAF08CD00EF45FD /* ResultSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSummaryView.swift; sourceTree = "<group>"; };
+		306978C92FAF08CD00EF45FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		306978CA2FAF08CD00EF45FD /* SeededRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeededRandom.swift; sourceTree = "<group>"; };
+		306978CB2FAF08CD00EF45FD /* ShapeSortGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSortGameView.swift; sourceTree = "<group>"; };
+		306978CC2FAF08CD00EF45FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		306978CD2FAF08CD00EF45FD /* Zorbulsexvor Loxbren.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Zorbulsexvor Loxbren.entitlements"; sourceTree = "<group>"; };
 		746646892F629D4A0060B71D /* Zorbulsexvor Loxbren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zorbulsexvor Loxbren.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		746C15802F6AC20200F44B30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		746C15812F6AC20200F44B30 /* AppStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageManager.swift; sourceTree = "<group>"; };
-		746C15822F6AC20200F44B30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		746C15832F6AC20200F44B30 /* CollectionAndSettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAndSettingsViews.swift; sourceTree = "<group>"; };
-		746C15842F6AC20200F44B30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		746C15852F6AC20200F44B30 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
-		746C15862F6AC20200F44B30 /* GameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModels.swift; sourceTree = "<group>"; };
-		746C15872F6AC20200F44B30 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		746C15882F6AC20200F44B30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		746C15892F6AC20200F44B30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		746C158B2F6AC20200F44B30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		746C158D2F6AC20200F44B30 /* MainShellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShellView.swift; sourceTree = "<group>"; };
-		746C158E2F6AC20200F44B30 /* OnboardingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViews.swift; sourceTree = "<group>"; };
-		746C158F2F6AC20200F44B30 /* PatternRecallGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternRecallGameView.swift; sourceTree = "<group>"; };
-		746C15902F6AC20200F44B30 /* PixelMatchGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelMatchGameView.swift; sourceTree = "<group>"; };
-		746C15912F6AC20200F44B30 /* PlayRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRootView.swift; sourceTree = "<group>"; };
-		746C15922F6AC20200F44B30 /* ResultSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSummaryView.swift; sourceTree = "<group>"; };
-		746C15932F6AC20200F44B30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		746C15942F6AC20200F44B30 /* SeededRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeededRandom.swift; sourceTree = "<group>"; };
-		746C15952F6AC20200F44B30 /* ShapeSortGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSortGameView.swift; sourceTree = "<group>"; };
-		746C15962F6AC20200F44B30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E5900076E6CBF2A51BEE7D7 /* Pods_Zorbulsexvor_Loxbren.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zorbulsexvor_Loxbren.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B0E76F0142B27431D0EF43 /* Pods-Zorbulsexvor Loxbren.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zorbulsexvor Loxbren.debug.xcconfig"; path = "Target Support Files/Pods-Zorbulsexvor Loxbren/Pods-Zorbulsexvor Loxbren.debug.xcconfig"; sourceTree = "<group>"; };
 		E6BCE18B955339EEA09C99CA /* Pods-Zorbulsexvor Loxbren.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zorbulsexvor Loxbren.release.xcconfig"; path = "Target Support Files/Pods-Zorbulsexvor Loxbren/Pods-Zorbulsexvor Loxbren.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746A19462F82E4FA0076A047 /* OneSignalFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +105,56 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		306978B52FAF08CD00EF45FD /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				306978A82FAF08CD00EF45FD /* AppGateRootView.swift */,
+				306978A92FAF08CD00EF45FD /* DeviceQueryParameters.swift */,
+				306978AA2FAF08CD00EF45FD /* InstallationIdentifierStore.swift */,
+				306978AB2FAF08CD00EF45FD /* LoadingConfig.swift */,
+				306978AC2FAF08CD00EF45FD /* LoadingFlowViewModel.swift */,
+				306978AD2FAF08CD00EF45FD /* LoadingView.swift */,
+				306978AE2FAF08CD00EF45FD /* NetworkReachability.swift */,
+				306978AF2FAF08CD00EF45FD /* OneSignalBootstrap.swift */,
+				306978B02FAF08CD00EF45FD /* RemoteGateDecisionStore.swift */,
+				306978B12FAF08CD00EF45FD /* RemoteGateService.swift */,
+				306978B22FAF08CD00EF45FD /* URLAppendingUUID.swift */,
+				306978B32FAF08CD00EF45FD /* WebviewVC.swift */,
+				306978B42FAF08CD00EF45FD /* WebviewVCRepresentable.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		306978CE2FAF08CD00EF45FD /* Zorbulsexvor Loxbren */ = {
+			isa = PBXGroup;
+			children = (
+				306978B52FAF08CD00EF45FD /* Loading */,
+				306978B62FAF08CD00EF45FD /* AppDelegate.swift */,
+				306978B72FAF08CD00EF45FD /* AppStorageManager.swift */,
+				306978B82FAF08CD00EF45FD /* Assets.xcassets */,
+				306978B92FAF08CD00EF45FD /* CollectionAndSettingsViews.swift */,
+				306978BA2FAF08CD00EF45FD /* ContentView.swift */,
+				306978BB2FAF08CD00EF45FD /* DesignSystem.swift */,
+				306978BC2FAF08CD00EF45FD /* GameModels.swift */,
+				306978BD2FAF08CD00EF45FD /* HomeViewModel.swift */,
+				306978BE2FAF08CD00EF45FD /* Info.plist */,
+				306978C02FAF08CD00EF45FD /* LaunchScreen.storyboard */,
+				306978C22FAF08CD00EF45FD /* Main.storyboard */,
+				306978C32FAF08CD00EF45FD /* MainShellView.swift */,
+				306978C42FAF08CD00EF45FD /* OnboardingViews.swift */,
+				306978C52FAF08CD00EF45FD /* PatternRecallGameView.swift */,
+				306978C62FAF08CD00EF45FD /* PixelMatchGameView.swift */,
+				306978C72FAF08CD00EF45FD /* PlayRootView.swift */,
+				306978C82FAF08CD00EF45FD /* ResultSummaryView.swift */,
+				306978C92FAF08CD00EF45FD /* SceneDelegate.swift */,
+				306978CA2FAF08CD00EF45FD /* SeededRandom.swift */,
+				306978CB2FAF08CD00EF45FD /* ShapeSortGameView.swift */,
+				306978CC2FAF08CD00EF45FD /* ViewController.swift */,
+				306978CD2FAF08CD00EF45FD /* Zorbulsexvor Loxbren.entitlements */,
+			);
+			path = "Zorbulsexvor Loxbren";
+			sourceTree = "<group>";
+		};
 		478A08CE83D3506EFCCD0D93 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,7 +167,7 @@
 		746646802F629D4A0060B71D = {
 			isa = PBXGroup;
 			children = (
-				746C15972F6AC20200F44B30 /* Zorbulsexvor Loxbren */,
+				306978CE2FAF08CD00EF45FD /* Zorbulsexvor Loxbren */,
 				7466468A2F629D4A0060B71D /* Products */,
 				478A08CE83D3506EFCCD0D93 /* Pods */,
 				1E1B6DC3B75E507CD2CA0B47 /* Frameworks */,
@@ -101,34 +180,6 @@
 				746646892F629D4A0060B71D /* Zorbulsexvor Loxbren.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		746C15972F6AC20200F44B30 /* Zorbulsexvor Loxbren */ = {
-			isa = PBXGroup;
-			children = (
-				746C15802F6AC20200F44B30 /* AppDelegate.swift */,
-				746C15812F6AC20200F44B30 /* AppStorageManager.swift */,
-				746C15822F6AC20200F44B30 /* Assets.xcassets */,
-				746C15832F6AC20200F44B30 /* CollectionAndSettingsViews.swift */,
-				746C15842F6AC20200F44B30 /* ContentView.swift */,
-				746C15852F6AC20200F44B30 /* DesignSystem.swift */,
-				746C15862F6AC20200F44B30 /* GameModels.swift */,
-				746C15872F6AC20200F44B30 /* HomeViewModel.swift */,
-				746C15882F6AC20200F44B30 /* Info.plist */,
-				746C158A2F6AC20200F44B30 /* LaunchScreen.storyboard */,
-				746C158C2F6AC20200F44B30 /* Main.storyboard */,
-				746C158D2F6AC20200F44B30 /* MainShellView.swift */,
-				746C158E2F6AC20200F44B30 /* OnboardingViews.swift */,
-				746C158F2F6AC20200F44B30 /* PatternRecallGameView.swift */,
-				746C15902F6AC20200F44B30 /* PixelMatchGameView.swift */,
-				746C15912F6AC20200F44B30 /* PlayRootView.swift */,
-				746C15922F6AC20200F44B30 /* ResultSummaryView.swift */,
-				746C15932F6AC20200F44B30 /* SceneDelegate.swift */,
-				746C15942F6AC20200F44B30 /* SeededRandom.swift */,
-				746C15952F6AC20200F44B30 /* ShapeSortGameView.swift */,
-				746C15962F6AC20200F44B30 /* ViewController.swift */,
-			);
-			path = "Zorbulsexvor Loxbren";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +227,9 @@
 				Base,
 			);
 			mainGroup = 746646802F629D4A0060B71D;
+			packageReferences = (
+				746A19442F82E4FA0076A047 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
+			);
 			productRefGroup = 7466468A2F629D4A0060B71D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -190,9 +244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				746C15A92F6AC20200F44B30 /* Assets.xcassets in Resources */,
-				746C15AB2F6AC20200F44B30 /* LaunchScreen.storyboard in Resources */,
-				746C15AC2F6AC20200F44B30 /* Main.storyboard in Resources */,
+				306978CF2FAF08CD00EF45FD /* Assets.xcassets in Resources */,
+				306978D12FAF08CD00EF45FD /* LaunchScreen.storyboard in Resources */,
+				306978D22FAF08CD00EF45FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,41 +282,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				746C15982F6AC20200F44B30 /* AppDelegate.swift in Sources */,
-				746C15992F6AC20200F44B30 /* AppStorageManager.swift in Sources */,
-				746C159A2F6AC20200F44B30 /* CollectionAndSettingsViews.swift in Sources */,
-				746C159B2F6AC20200F44B30 /* ContentView.swift in Sources */,
-				746C159C2F6AC20200F44B30 /* DesignSystem.swift in Sources */,
-				746C159D2F6AC20200F44B30 /* GameModels.swift in Sources */,
-				746C159E2F6AC20200F44B30 /* HomeViewModel.swift in Sources */,
-				746C159F2F6AC20200F44B30 /* MainShellView.swift in Sources */,
-				746C15A02F6AC20200F44B30 /* OnboardingViews.swift in Sources */,
-				746C15A12F6AC20200F44B30 /* PatternRecallGameView.swift in Sources */,
-				746C15A22F6AC20200F44B30 /* PixelMatchGameView.swift in Sources */,
-				746C15A32F6AC20200F44B30 /* PlayRootView.swift in Sources */,
-				746C15A42F6AC20200F44B30 /* ResultSummaryView.swift in Sources */,
-				746C15A52F6AC20200F44B30 /* SceneDelegate.swift in Sources */,
-				746C15A62F6AC20200F44B30 /* SeededRandom.swift in Sources */,
-				746C15A72F6AC20200F44B30 /* ShapeSortGameView.swift in Sources */,
-				746C15A82F6AC20200F44B30 /* ViewController.swift in Sources */,
+				306978D32FAF08CD00EF45FD /* AppGateRootView.swift in Sources */,
+				306978D42FAF08CD00EF45FD /* DeviceQueryParameters.swift in Sources */,
+				306978D52FAF08CD00EF45FD /* InstallationIdentifierStore.swift in Sources */,
+				306978D62FAF08CD00EF45FD /* LoadingConfig.swift in Sources */,
+				306978D72FAF08CD00EF45FD /* LoadingFlowViewModel.swift in Sources */,
+				306978D82FAF08CD00EF45FD /* LoadingView.swift in Sources */,
+				306978D92FAF08CD00EF45FD /* NetworkReachability.swift in Sources */,
+				306978DA2FAF08CD00EF45FD /* OneSignalBootstrap.swift in Sources */,
+				306978DB2FAF08CD00EF45FD /* RemoteGateDecisionStore.swift in Sources */,
+				306978DC2FAF08CD00EF45FD /* RemoteGateService.swift in Sources */,
+				306978DD2FAF08CD00EF45FD /* URLAppendingUUID.swift in Sources */,
+				306978DE2FAF08CD00EF45FD /* WebviewVC.swift in Sources */,
+				306978DF2FAF08CD00EF45FD /* WebviewVCRepresentable.swift in Sources */,
+				306978E02FAF08CD00EF45FD /* AppDelegate.swift in Sources */,
+				306978E12FAF08CD00EF45FD /* AppStorageManager.swift in Sources */,
+				306978E22FAF08CD00EF45FD /* CollectionAndSettingsViews.swift in Sources */,
+				306978E32FAF08CD00EF45FD /* ContentView.swift in Sources */,
+				306978E42FAF08CD00EF45FD /* DesignSystem.swift in Sources */,
+				306978E52FAF08CD00EF45FD /* GameModels.swift in Sources */,
+				306978E62FAF08CD00EF45FD /* HomeViewModel.swift in Sources */,
+				306978E72FAF08CD00EF45FD /* MainShellView.swift in Sources */,
+				306978E82FAF08CD00EF45FD /* OnboardingViews.swift in Sources */,
+				306978E92FAF08CD00EF45FD /* PatternRecallGameView.swift in Sources */,
+				306978EA2FAF08CD00EF45FD /* PixelMatchGameView.swift in Sources */,
+				306978EB2FAF08CD00EF45FD /* PlayRootView.swift in Sources */,
+				306978EC2FAF08CD00EF45FD /* ResultSummaryView.swift in Sources */,
+				306978ED2FAF08CD00EF45FD /* SceneDelegate.swift in Sources */,
+				306978EE2FAF08CD00EF45FD /* SeededRandom.swift in Sources */,
+				306978EF2FAF08CD00EF45FD /* ShapeSortGameView.swift in Sources */,
+				306978F02FAF08CD00EF45FD /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		746C158A2F6AC20200F44B30 /* LaunchScreen.storyboard */ = {
+		306978C02FAF08CD00EF45FD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				746C15892F6AC20200F44B30 /* Base */,
+				306978BF2FAF08CD00EF45FD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		746C158C2F6AC20200F44B30 /* Main.storyboard */ = {
+		306978C22FAF08CD00EF45FD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				746C158B2F6AC20200F44B30 /* Base */,
+				306978C12FAF08CD00EF45FD /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -276,8 +343,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Zorbulsexvor Loxbren/Zorbulsexvor Loxbren.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Zorbulsexvor Loxbren/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Zorbulsexvor Loxbren";
@@ -292,7 +360,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hun.mn3m2n6m;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -315,8 +383,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Zorbulsexvor Loxbren/Zorbulsexvor Loxbren.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Zorbulsexvor Loxbren/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Zorbulsexvor Loxbren";
@@ -331,7 +400,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hun.mn3m2n6m;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -489,6 +558,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		746A19442F82E4FA0076A047 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		746A19452F82E4FA0076A047 /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 746A19442F82E4FA0076A047 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalFramework;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 746646812F629D4A0060B71D /* Project object */;
 }
